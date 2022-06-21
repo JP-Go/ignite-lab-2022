@@ -1,7 +1,33 @@
-function App() {
-  return (
-    <h1 className="font-sans text-5xl font-bold text-purple-500"> Hello </h1>
-  )
+import { gql, useQuery } from "@apollo/client";
+
+const GET_LESSONS_QUERY = gql`
+  query {
+    lessons {
+      id
+      title
+    }
+  }
+`;
+
+interface Lesson {
+  id: string;
+  title: string;
 }
 
-export default App
+interface LessonsData {
+  lessons: Lesson[];
+}
+
+function App() {
+  const { data } = useQuery<LessonsData>(GET_LESSONS_QUERY);
+
+  return (
+    <ul>
+      {data?.lessons.map(({ id, title }: Lesson) => {
+        return <li key={id}>{title}</li>;
+      })}
+    </ul>
+  );
+}
+
+export default App;
