@@ -8,7 +8,6 @@ export default function Sidebar() {
 			<Lesson />
 			<Lesson />
 			<Lesson />
-			<Lesson />
 		</div>
 	</aside>);
 }
