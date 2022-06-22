@@ -1,7 +1,7 @@
-import Evento from "./pages/Evento";
+import Event from "./pages/Event";
 
-function App() {
-	return <Evento/>
+function App():JSX.Element {
+	return <Event/>
 }
 
 export default App;
