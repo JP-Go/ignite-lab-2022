@@ -3,6 +3,8 @@ import {useState, FormEvent} from 'react';
 import {useNavigate} from 'react-router-dom';
 import {useCreateSubscriberMutation} from '../graphql/generated';
 
+import codeMock from '../assets/code-mock.png'
+
 export default function Subscribe() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -75,7 +77,7 @@ export default function Subscribe() {
         </div>
       </div>
 
-      <img src='./src/assets/code-mock.png' className='mt-10' />
+      <img src={codeMock} className='mt-10' />
     </div>
   );
 }
