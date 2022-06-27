@@ -11,3 +11,6 @@ Plataforma de eventos criada no evento Ignite Lab 2022 da Rocketseat
 - Postcss
 - GraphQl
 - GraphCMS
+- Phosphor React
+- Date fns
+- Classnames
