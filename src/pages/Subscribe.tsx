@@ -75,7 +75,7 @@ export default function Subscribe() {
         </div>
       </div>
 
-      <img src='/src/assets/code-mock.png' className='mt-10' />
+      <img src='./src/assets/code-mock.png' className='mt-10' />
     </div>
   );
 }
