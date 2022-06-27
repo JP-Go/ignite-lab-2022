@@ -47,4 +47,4 @@ aplicação mas que não serão adicionadas pela natureza educativa do projeto.
 - Enviar email de confirmação para o usuário com um link de ativação da conta
 - Mudar o estato do Subscriber para published quando o usuário ativar a conta
 - Implementar funcionalidade de login onde o usuário não pode acessar às aulas
-sem 
+sem ter cadastro na plataforma
