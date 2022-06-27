@@ -1,7 +1,7 @@
-import { CheckCircle, Lock } from 'phosphor-react';
-import { isPast, format } from 'date-fns';
+import {CheckCircle, Lock} from 'phosphor-react';
+import {isPast, format} from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
-import { Link, useParams } from 'react-router-dom';
+import {Link, useParams} from 'react-router-dom';
 import classNames from 'classnames';
 
 interface LessonProps {
@@ -12,12 +12,12 @@ interface LessonProps {
 }
 
 export default function Lesson(props: LessonProps) {
-  const { slug } = useParams<{ slug: string }>();
+  const {slug} = useParams<{slug: string}>();
   const isLessonAvailable = isPast(props.availableAt);
   const availableAtDateFormated = format(
     props.availableAt,
     "EEEE '•' d 'de' MMMM '•' k'h'mm",
-    { locale: ptBR }
+    {locale: ptBR}
   );
 
   const isActiveLesson = slug === props.slug;
@@ -29,7 +29,7 @@ export default function Lesson(props: LessonProps) {
       <div
         className={classNames(
           'rounded border border-gray-500 p-4 mt-2 group-hover:border-green-500',
-          { 'bg-green-500': isActiveLesson }
+          {'bg-green-500': isActiveLesson}
         )}
       >
         <header className='flex items-center justify-between'>
@@ -51,11 +51,15 @@ export default function Lesson(props: LessonProps) {
             </span>
           )}
 
-          <span className={classNames('text-xs rounded px-2 py-[0.125rem] text-white border font-bold',{
-						'border-green-300':!isActiveLesson,
-						'border-white':isActiveLesson,
-
-					})}>
+          <span
+            className={classNames(
+              'text-xs rounded px-2 py-[0.125rem] text-white border font-bold',
+              {
+                'border-green-300': !isActiveLesson,
+                'border-white': isActiveLesson,
+              }
+            )}
+          >
             {props.type === 'live' ? 'AO VIVO' : 'AULA PRÁTICA'}
           </span>
         </header>
