@@ -26,25 +26,30 @@ Se você quer somente visualizar a aplicação final, pode fazer-lo no site:
 Se você é desenvolvedor e quer ver e editar o código fonte na sua máquina:
 
 1. Clone esse projeto com git e entre na pasta do projeto
+
 ```bash
-	git clone https://www.gitlab.com/JP-Go/ignite-lab-2022-react
+	git clone https://www.github.com/JP-Go/ignite-lab-2022
 	cd ignite-lab-2022-react
 ```
+
 2. Instale as dependencias com seu gerenciador de pacotes preferido
+
 ```bash
 	yarn install #(ou npm i)
 ```
-3. Inicie o servidor de desenvolvimento 
+
+3. Inicie o servidor de desenvolvimento
+
 ```
 	yarn dev #(ou npm run dev)
 ```
 
 # Adições que seriam legais
 
-Essas são funcionalidades que poderiam ser adicionadas no app para melhorar a 
+Essas são funcionalidades que poderiam ser adicionadas no app para melhorar a
 aplicação mas que não serão adicionadas pela natureza educativa do projeto.
 
 - Enviar email de confirmação para o usuário com um link de ativação da conta
 - Mudar o estato do Subscriber para published quando o usuário ativar a conta
 - Implementar funcionalidade de login onde o usuário não pode acessar às aulas
-sem ter cadastro na plataforma
+  sem ter cadastro na plataforma
