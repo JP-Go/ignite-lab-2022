@@ -4,7 +4,6 @@ import { client } from './lib/apollo';
 import { Router } from './Router';
 
 function App(): JSX.Element {
-  //return <Event />;
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
